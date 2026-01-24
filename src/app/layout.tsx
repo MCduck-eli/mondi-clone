@@ -56,7 +56,13 @@ export default function RootLayout({
                         >
                             <Navbar />
 
-                            <main style={{ flex: 1, width: "100%" }}>
+                            <main
+                                className="md:mt-26 mt-10"
+                                style={{
+                                    flex: 1,
+                                    width: "100%",
+                                }}
+                            >
                                 {children}
                             </main>
 

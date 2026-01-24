@@ -16,7 +16,7 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="bg-neutral-primary  fixed w-full z-20 top-0 start-0 bg-blue-400 text-white shadow-md">
+        <nav className="bg-blue-400 fixed w-full z-20 top-0 start-0 text-white shadow-md">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <Link
                     href="/"
@@ -33,7 +33,7 @@ const Navbar = () => {
                             style={{ borderRadius: "100%", objectFit: "cover" }}
                         />
                     </div>
-                    <span className="self-center text-3xl  text-heading font-semibold whitespace-nowrap">
+                    <span className="self-center text-3xl font-semibold whitespace-nowrap">
                         Mondi
                     </span>
                 </Link>
@@ -41,7 +41,7 @@ const Navbar = () => {
                 <button
                     onClick={toggleMenu}
                     type="button"
-                    className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-base md:hidden hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-neutral-tertiary transition-colors"
+                    className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-base md:hidden hover:bg-blue-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-300 transition-colors"
                     aria-controls="navbar-default"
                     aria-expanded={isMenuOpen}
                 >
@@ -85,14 +85,14 @@ const Navbar = () => {
                 </button>
 
                 <div
-                    className={`${isMenuOpen ? "block" : "hidden"} w-full md:block md:w-auto absolute md:static top-16 left-0 md:top-auto md:left-auto bg-white md:bg-transparent shadow-lg md:shadow-none`}
+                    className={`${isMenuOpen ? "block" : "hidden"} w-full md:block md:w-auto absolute md:static top-16 left-0 md:top-auto md:left-auto bg-blue-400 md:bg-transparent shadow-lg md:shadow-none transition-all duration-300`}
                     id="navbar-default"
                 >
-                    <ul className="font-medium flex flex-col p-4 md:p-0 border-b border-gray-200 md:border-0 rounded-base bg-white md:bg-transparent md:flex-row md:space-x-8 rtl:space-x-reverse">
+                    <ul className="font-medium flex flex-col p-4 md:p-0 border-b border-blue-300 md:border-0 rounded-base bg-blue-400 md:bg-transparent md:flex-row md:space-x-8 rtl:space-x-reverse">
                         <li>
                             <Link
                                 href="/"
-                                className="block py-3 px-4 mt-2 hover:bg-neutral-secondary-soft rounded md:bg-transparent md:text-fg-brand md:p-0 md:hover:bg-transparent md:hover:text-blue-600 transition-colors"
+                                className="block py-3 px-4 text-white hover:bg-blue-500 rounded md:bg-transparent md:text-white md:p-0 md:hover:bg-transparent md:hover:text-blue-100 transition-colors"
                                 onClick={closeMenu}
                             >
                                 Asosiy sahifa
@@ -102,7 +102,7 @@ const Navbar = () => {
                         <li>
                             <Link
                                 href="/all-products"
-                                className="block py-3 mt-2 px-4 text-heading hover:bg-neutral-secondary-soft rounded md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 transition-colors"
+                                className="block py-3 px-4 text-white hover:bg-blue-500 rounded md:hover:bg-transparent md:border-0 md:hover:text-blue-100 md:p-0 transition-colors"
                                 onClick={closeMenu}
                             >
                                 Bizning mahsulotlar
@@ -111,13 +111,12 @@ const Navbar = () => {
                         <li>
                             <Link
                                 href="/contact"
-                                className="block py-3 mt-2 px-4 text-heading hover:bg-neutral-secondary-soft rounded md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 transition-colors"
+                                className="block py-3 px-4 text-white hover:bg-blue-500 rounded md:hover:bg-transparent md:border-0 md:hover:text-blue-100 md:p-0 transition-colors"
                                 onClick={closeMenu}
                             >
                                 Biz bilan bog'lanish
                             </Link>
                         </li>
-                        <li className="mt-2 md:mt-0"></li>
                     </ul>
                 </div>
             </div>
