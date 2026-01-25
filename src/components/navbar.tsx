@@ -1,5 +1,6 @@
 "use client";
 
+import { Typography } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -33,9 +34,10 @@ const Navbar = () => {
                             style={{ borderRadius: "100%", objectFit: "cover" }}
                         />
                     </div>
-                    <span className="self-center text-3xl font-semibold whitespace-nowrap">
-                        Mondi
-                    </span>
+                    <h1 className="text-6xl font-bold text-white">
+                        Mondi{" "}
+                        <span className="text-gray-700 text-5xl">Café</span>
+                    </h1>
                 </Link>
 
                 <button
