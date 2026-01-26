@@ -1,6 +1,5 @@
 "use client";
 
-import { Typography } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -32,11 +31,23 @@ const Navbar = () => {
                             width={80}
                             priority
                             style={{ borderRadius: "100%", objectFit: "cover" }}
+                            className="md:block hidden"
+                        />
+                        <Image
+                            src={"/mondi-logo.jpg"}
+                            alt="logo"
+                            height={50}
+                            width={50}
+                            priority
+                            style={{ borderRadius: "100%", objectFit: "cover" }}
+                            className="md:hidden block"
                         />
                     </div>
-                    <h1 className="text-6xl font-bold text-white">
+                    <h1 className="md:text-6xl text-4xl font-bold text-white">
                         Mondi{" "}
-                        <span className="text-gray-700 text-5xl">Café</span>
+                        <span className="text-gray-700 md:text-5xl text-3xl">
+                            Café
+                        </span>
                     </h1>
                 </Link>
 

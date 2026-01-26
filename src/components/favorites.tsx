@@ -12,9 +12,11 @@ const Favorites = () => {
             transition={{ duration: 0.6, ease: "easeOut" }}
             viewport={{ once: true }}
         >
-            <h1 className="md:text-4xl text-2xl flex justify-center md:justify-start font-bold p-5">
-                Bizning sevimli mahsulotlarimiz
-            </h1>
+            <div className="flex text-center md:text-start">
+                <h1 className="md:text-4xl text-2xl font-bold p-5">
+                    Bizning sevimli mahsulotlarimiz
+                </h1>
+            </div>
             <div className=" flex md:flex-row flex-col  gap-4">
                 {favoritesMaterial.map((item) => (
                     <div

@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const Menu = () => {
     return (
-        <div className="w-full mt-12">
+        <div className="w-full md:mt-12 mt-8">
             <motion.div
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -28,10 +28,10 @@ const Menu = () => {
                             transition={{ duration: 0.6, ease: "easeOut" }}
                             viewport={{ once: true }}
                         >
-                            <h1 className="text-white text-4xl md:text-6xl font-bold">
+                            <h1 className="text-white text-3xl md:text-6xl font-bold">
                                 Welcome to Mondi Café
                             </h1>
-                            <p className="text-white text-lg md:text-2xl mt-4 mb-2">
+                            <p className="text-white text-lg md:block hidden md:text-2xl mt-4 mb-2">
                                 Bizning café — shahar markazida joylashgan,
                                 issiq muhit va qulay sharoit bilan mijozlarni
                                 kutib oladi. Har bir taom va ichimlik yangi,
@@ -39,6 +39,12 @@ const Menu = () => {
                                 yengil tushlikdan tortib, shirinlik va specialty
                                 coffee gacha bo‘lgan keng tanlovni taqdim
                                 etamiz.
+                            </p>
+
+                            <p className="text-white text-lg md:hidden block md:text-2xl md:mt-4 mb-2">
+                                Bizning café — shahar markazida joylashgan,
+                                issiq muhit va qulay sharoit bilan mijozlarni
+                                kutib oladi.
                             </p>
 
                             <a
