@@ -15,7 +15,7 @@ const Menu = () => {
             >
                 <div className="relative w-full h-[60vh] md:h-screen overflow-hidden">
                     <Image
-                        src="/mondi3.jpg"
+                        src="/mondii.jpg"
                         alt="mondi"
                         fill
                         style={{ objectFit: "cover" }}
