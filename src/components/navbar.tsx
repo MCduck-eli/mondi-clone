@@ -109,7 +109,10 @@ const Navbar = () => {
                         {navItems.map((item) => (
                             <li key={item.route}>
                                 <Button
-                                    onClick={() => router.push(item.route)}
+                                    onClick={() => {
+                                        router.push(item.route);
+                                        closeMenu();
+                                    }}
                                     sx={{ color: "#fff" }}
                                 >
                                     {item.label}

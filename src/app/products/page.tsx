@@ -15,8 +15,6 @@ async function getProducts(): Promise<GetProducts[]> {
 const AllProducts = async () => {
     const products = await getProducts();
 
-    console.log(products);
-
     return (
         <div className="relative w-full min-h-screen">
             <Image

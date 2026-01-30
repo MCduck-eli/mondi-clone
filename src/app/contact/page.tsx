@@ -11,7 +11,7 @@ const ContactPage = () => {
                 priority
             />
 
-            <div className="relative z-10 bg-base-200/80 py-8 sm:py-16 lg:py-24">
+            <div className="relative z-10 bg-base-200/80 py-14 md:py-6 sm:py-16 lg:py-24">
                 <div className="mx-auto text-white max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="relative mx-auto mb-10 w-fit sm:mb-16 lg:mb-24">
                         <h2 className="text-base-content text-2xl font-bold md:text-3xl lg:text-4xl">
