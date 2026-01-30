@@ -21,7 +21,7 @@ const Favorites = () => {
                 {favoritesMaterial.map((item) => (
                     <div
                         key={item.id}
-                        className=" mt-[20px 0px] bg-neutral-primary-soft block rounded-[5px] md:max-w-sm w-full p-6 cursor-pointer bg-amber-50 border-default rounded-base shadow-xs transition-all ease-out duration-800 hover:bg-amber-700"
+                        className=" mt-[20px 0px] bg-neutral-primary-soft block rounded-[5px] md:max-w-sm w-full p-6 cursor-pointer bg-amber-50 border-default rounded-base shadow-xs transition-all ease-out duration-800 hover:bg-sky-500 hover:text-white"
                     >
                         <div className="relative flex justify-center">
                             <Image
@@ -57,8 +57,8 @@ const Favorites = () => {
                             >
                                 <path
                                     stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
                                     stroke-width="2"
                                     d="M19 12H5m14 0-4 4m4-4-4-4"
                                 />

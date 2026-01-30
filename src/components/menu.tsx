@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Menu = () => {
     return (
@@ -47,8 +48,9 @@ const Menu = () => {
                                 kutib oladi.
                             </p>
 
-                            <a
-                                href="#"
+                            <Link
+                                href="https://t.me/MondiLocation?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGn3ozAiI-5EDi9NXSOlDnxIbKzE3A-CK3dl67oTKAkitgoxYk_cm_YX-0xMq8_aem_cw7wK4P61OcaR_-yO_QDKg"
+                                target="_blank"
                                 className="inline-flex items-center text-body bg-white box-border rounded-[5px] border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none transition-all ease-out duration-700 hover:bg-amber-100"
                             >
                                 Bizning Manzilimiz
@@ -69,7 +71,7 @@ const Menu = () => {
                                         d="M19 12H5m14 0-4 4m4-4-4-4"
                                     />
                                 </svg>
-                            </a>
+                            </Link>
                         </motion.div>
                     </div>
                 </div>

@@ -5,10 +5,10 @@ import { useState, useEffect } from "react";
 
 const Hero = () => {
     const images = [
-        "/mondi3.jpg",
+        "/mondii.jpg",
         "/mondi1.webp",
         "/mondi2.jpg",
-        "/monid4.jpeg",
+        "/mondii4.jpg",
     ];
 
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -36,7 +36,7 @@ const Hero = () => {
 
     return (
         <div className="relative w-full overflow-hidden md:mt-0 mt-9">
-            <div className="relative h-[400px] md:h-[600px] overflow-hidden">
+            <div className="relative h-100 md:h-150 overflow-hidden">
                 {images.map((src, index) => (
                     <div
                         key={index}
@@ -51,11 +51,11 @@ const Hero = () => {
                             alt={`Slide ${index + 1}`}
                             fill
                             priority={index === 0}
-                            className="object-cover"
+                            objectFit="cover"
                             onLoadingComplete={() => setIsLoading(false)}
                         />
 
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                        <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent"></div>
 
                         <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-center text-white z-20">
                             <h1 className="text-3xl md:text-5xl font-bold mb-2">
@@ -69,7 +69,7 @@ const Hero = () => {
                 ))}
 
                 {isLoading && (
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-200 to-cyan-200 animate-pulse"></div>
+                    <div className="absolute inset-0 bg-linear-to-r from-blue-200 to-cyan-200 animate-pulse"></div>
                 )}
             </div>
 

@@ -3,9 +3,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { navItems } from "../route";
+import { Button } from "@mui/material";
+import { useRouter } from "next/navigation";
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const router = useRouter();
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -17,7 +21,7 @@ const Navbar = () => {
 
     return (
         <nav className="bg-blue-400 fixed w-full z-20 top-0 start-0 text-white shadow-md">
-            <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <div className="max-w-7xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <Link
                     href="/"
                     className="flex items-center space-x-3 rtl:space-x-reverse"
@@ -102,34 +106,16 @@ const Navbar = () => {
                     id="navbar-default"
                 >
                     <ul className="font-medium flex flex-col p-4 md:p-0 border-b border-blue-300 md:border-0 rounded-base bg-blue-400 md:bg-transparent md:flex-row md:space-x-8 rtl:space-x-reverse">
-                        <li>
-                            <Link
-                                href="/"
-                                className="block py-3 px-4 text-white hover:bg-blue-500 rounded md:bg-transparent md:text-white md:p-0 md:hover:bg-transparent md:hover:text-blue-100 transition-colors"
-                                onClick={closeMenu}
-                            >
-                                Asosiy sahifa
-                            </Link>
-                        </li>
-
-                        <li>
-                            <Link
-                                href="/all-products"
-                                className="block py-3 px-4 text-white hover:bg-blue-500 rounded md:hover:bg-transparent md:border-0 md:hover:text-blue-100 md:p-0 transition-colors"
-                                onClick={closeMenu}
-                            >
-                                Bizning mahsulotlar
-                            </Link>
-                        </li>
-                        <li>
-                            <Link
-                                href="/contact"
-                                className="block py-3 px-4 text-white hover:bg-blue-500 rounded md:hover:bg-transparent md:border-0 md:hover:text-blue-100 md:p-0 transition-colors"
-                                onClick={closeMenu}
-                            >
-                                Biz bilan bog'lanish
-                            </Link>
-                        </li>
+                        {navItems.map((item) => (
+                            <li key={item.route}>
+                                <Button
+                                    onClick={() => router.push(item.route)}
+                                    sx={{ color: "#fff" }}
+                                >
+                                    {item.label}
+                                </Button>
+                            </li>
+                        ))}
                     </ul>
                 </div>
             </div>
