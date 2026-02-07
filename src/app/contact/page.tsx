@@ -93,10 +93,10 @@ const ContactPage = () => {
                                         </h4>
                                         <div className="text-center">
                                             <p className="text-base-content/80">
-                                                +998-94-022-0361
+                                                +998-XX-XXX-XX-XX
                                             </p>
                                             <p className="text-base-content/80">
-                                                +998-90-123-4567
+                                                +998-XX-XXX-XX-XX
                                             </p>
                                         </div>
                                     </div>
